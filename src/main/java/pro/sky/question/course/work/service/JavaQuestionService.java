@@ -2,11 +2,9 @@ package pro.sky.question.course.work.service;
 
 import org.springframework.stereotype.Service;
 import pro.sky.question.course.work.domain.Question;
+import pro.sky.question.course.work.exceptions.NotFoundException;
 
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class JavaQuestionService implements QuestionService {
@@ -42,7 +40,7 @@ public class JavaQuestionService implements QuestionService {
 
     @Override
     public Collection<Question> getAll() {
-        return Collection.unmodifiableSet(questions);
+        return Collections.unmodifiableSet(questions);
     }
 
     @Override
